@@ -1,0 +1,29 @@
+#+TITLE: reftest
+#+LATEX: \pagebreak
+
+* Overview
+
+~reftest~ tests functions against reference implementations, and outputs a TAP stream.
+
+* Usage
+
+#+BEGIN_SRC fish
+  reftest /path/to/test
+#+END_SRC
+
+~reftest~ expects three directories in the target path:
+  - functions/
+  - reference/
+  - test/cases/
+
+For each test case found, it will invoke the function, and the corresponding
+reference implementation, passing each line of the test case as an argument.
+
+For testing against fixtures, ~test/data/~ is suggested (but not enforced).
+
+* License
+
+~reftest~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See ~LICENSE.txt~ for the full text.
+
+* Contributors
+- [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
