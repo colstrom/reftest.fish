@@ -16,7 +16,7 @@ function reftest --argument path
                         set scenario (string replace --all --regex '[-_]' ' ' (basename $case))
 
                         if test (eval $unit $test) = (eval reference/$unit $test)
-                            echo ok - $scenario
+                            echo ok - $unit $scenario
                         else
                             echo not ok - $unit $scenario
                             set failed 1
